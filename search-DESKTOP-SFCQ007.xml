@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[js 坑]]></title>
+      <url>/2017/09/20/js-%E5%9D%91/</url>
+      <content type="html"><![CDATA[<ol>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> <span class="literal">null</span> == object</div></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> javaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[手厅开发手册（自用）]]></title>
+      <url>/2017/09/19/%E6%89%8B%E5%8E%85%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C-by-zxy%EF%BC%88%E8%87%AA%E7%94%A8%EF%BC%89/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h1 id="获取versionid（最新方法）"><a href="#获取versionid（最新方法）" class="headerlink" title="获取versionid（最新方法）"></a>获取versionid（最新方法）</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var versionid = ua.match(/sjyyt\/(\S*)/)[1];//获取版本号</div></pre></td></tr></table></figure>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2017-09-13 札记]]></title>
+      <url>/2017/09/12/2017-09-13-%E6%9C%AD%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>离开你的日子已经快1个月了，想你。曾经好几次在你楼下，期待着和你的偶遇。<br>襄王有意，神女无情，没有下半场了。</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JavaScirptDOM编程艺术笔记]]></title>
+      <url>/2017/08/01/JavaScirptDOM%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1>]]></content>
+      
+        <categories>
+            
+            <category> 读书笔记 </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[一种居中的方法]]></title>
+      <url>/2017/07/27/%E4%B8%80%E7%A7%8D%E5%B1%85%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+      <content type="html"><![CDATA[<p><em>绝对定位 上下左右都设置为0 margin为auto即可</em></p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"../../css/base2016.css"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">		html,body &#123;</div><div class="line">			width: 100%;</div><div class="line">			height: 100%;</div><div class="line">		&#125;</div><div class="line">		.father &#123;</div><div class="line">			width: 100%;</div><div class="line">			height: 100%;</div><div class="line">			border: 1px red solid;</div><div class="line">			position: fixed;</div><div class="line">		&#125;</div><div class="line">		.father .son &#123;</div><div class="line">			width: 500px;</div><div class="line">			height: 500px;</div><div class="line">			border: 1px grey solid;</div><div class="line">			position: absolute;</div><div class="line">			top: 0;</div><div class="line">			bottom: 0;</div><div class="line">			left: 0;</div><div class="line">			right: 0;</div><div class="line">			margin: auto;</div><div class="line">			/*绝对定位 上下左右都设置为0 margin为auto即可*/</div><div class="line">		&#125;</div><div class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>]]></content>
+      
+        <categories>
+            
+            <category> css </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[我做的项目]]></title>
+      <url>/2017/07/24/%E6%88%91%E5%81%9A%E7%9A%84%E9%A1%B9%E7%9B%AE/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h1 id="手机营业厅"><a href="#手机营业厅" class="headerlink" title="手机营业厅"></a>手机营业厅</h1><ol>
+<li><a href="https://app.m.zj.chinamobile.com/zjweb/sjyytv4/HZchongzhisong/index.html" target="_blank" rel="external">杭州充值送</a></li>
+<li><a href="https://app.m.zj.chinamobile.com/zjweb/sjyytv4/migusummer/index.html" target="_blank" rel="external">咪咕爱看送流量</a></li>
+<li><a href="https://app.m.zj.chinamobile.com/zjweb/sjyyt/birthdaycare/index.html" target="_blank" rel="external">生日礼包</a></li>
+<li><a href="https://app.m.zj.chinamobile.com/zjweb/sjyytv3/JFDH/index.html" target="_blank" rel="external">积分兑换（添加免登录)</a></li>
+<li><a href="https://app.m.zj.chinamobile.com/zjweb/sjyytv4/selfquery/index.html" target="_blank" rel="external">自助查询</a></li>
+<li><a href="https://app.m.zj.chinamobile.com/zjweb/sjyytv3/search/index2.html" target="_blank" rel="external">搜索改造</a></li>
+<li><a href="https://app.m.zj.chinamobile.com/zjweb/sjyytv4/517/index.html" target="_blank" rel="external">福利社改造</a></li>
+</ol>
+<h1 id="OAapp"><a href="#OAapp" class="headerlink" title="OAapp"></a>OAapp</h1>]]></content>
+      
+        <categories>
+            
+            <category> 项目 </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[廖雪峰javascript学习笔记]]></title>
+      <url>/2017/07/23/js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="还未填的坑"><a href="#还未填的坑" class="headerlink" title="还未填的坑"></a>还未填的坑</h2><h3 id="chrome"><a href="#chrome" class="headerlink" title="chrome"></a>chrome</h3><h4 id="断点调试"><a href="#断点调试" class="headerlink" title="断点调试"></a>断点调试</h4><h4 id="单步执行"><a href="#单步执行" class="headerlink" title="单步执行"></a>单步执行</h4><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><h4 id="isNaN"><a href="#isNaN" class="headerlink" title="isNaN"></a>isNaN</h4><h4 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h4><p>启用strict模式的方法是在JavaScript代码的第一行写上：</p>
+<blockquote>
+<p>‘use strict’;</p>
+</blockquote>
+<h4 id="多行字符串"><a href="#多行字符串" class="headerlink" title="多行字符串"></a>多行字符串</h4><h4 id="模版字符串"><a href="#模版字符串" class="headerlink" title="模版字符串"></a>模版字符串</h4><p>####字符串常见方法</p>
+<blockquote>
+<p>indexOf</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> javascript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[学习如何使用md]]></title>
+      <url>/2017/07/21/%E5%AD%A6%E4%B9%A0%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8md/</url>
+      <content type="html"><![CDATA[<h1 id="常用格式"><a href="#常用格式" class="headerlink" title="常用格式"></a>常用格式</h1><h2 id="标题格式"><a href="#标题格式" class="headerlink" title="标题格式"></a>标题格式</h2><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><a id="more"></a>
+<ul>
+<li>第一行</li>
+<li>第二行</li>
+<li>第三行</li>
+</ul>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><ol>
+<li>第一行</li>
+<li>第二行</li>
+<li>第三行</li>
+</ol>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
+<p>这里是引用。我要开始吟诗了，苟利国家生死以，岂因祸福避趋之。</p>
+</blockquote>
+<h2 id="图片与链接"><a href="#图片与链接" class="headerlink" title="图片与链接"></a>图片与链接</h2><p>这个待施工</p>
+<h2 id="引入代码（对程序员当然最重要，哈哈）"><a href="#引入代码（对程序员当然最重要，哈哈）" class="headerlink" title="引入代码（对程序员当然最重要，哈哈）"></a>引入代码（对程序员当然最重要，哈哈）</h2><h3 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h3><p><code>hello world</code></p>
+<h3 id="块状代码"><a href="#块状代码" class="headerlink" title="块状代码"></a>块状代码</h3><pre><code>hello world
+</code></pre><h3 id="表明代码类型（高亮）"><a href="#表明代码类型（高亮）" class="headerlink" title="表明代码类型（高亮）"></a>表明代码类型（高亮）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div></pre></td></tr></table></figure>
+<h3 id="还有一种也可以高亮"><a href="#还有一种也可以高亮" class="headerlink" title="还有一种也可以高亮"></a>还有一种也可以高亮</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div></pre></td></tr></table></figure>
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><hr>
+]]></content>
+      
+        <categories>
+            
+            <category> tools </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>/2017/07/21/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> 存档 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-22T07:14:40.634Z</updated>
+  <updated>2019-07-23T07:43:49.636Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>摸鱼大法</title>
+    <link href="http://yoursite.com/2019/07/23/%E6%91%B8%E9%B1%BC%E5%A4%A7%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/07/23/摸鱼大法/</id>
+    <published>2019-07-23T07:36:05.000Z</published>
+    <updated>2019-07-23T07:43:49.636Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>古人云：水至清则无鱼。只有浑水才能摸鱼。古人又云：工欲善其事，必先利其器。因此，只有做好准备才能更好的划水。</p></blockquote><a id="more"></a><blockquote><p>免责声明：本人作为上一年度公司优秀员工，热爱工作，热衷于技术、想法的分享与交流。本文仅做交流心得用，若出现难以预料之后果，概不负责。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;古人云：水至清则无鱼。只有浑水才能摸鱼。古人又云：工欲善其事，必先利其器。因此，只有做好准备才能更好的划水。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="工作心得" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C%E5%BF%83%E5%BE%97/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一点点想法</title>
     <link href="http://yoursite.com/2019/07/22/%E4%B8%80%E7%82%B9%E7%82%B9%E6%83%B3%E6%B3%95/"/>
     <id>http://yoursite.com/2019/07/22/一点点想法/</id>
     <published>2019-07-22T07:13:56.000Z</published>
-    <updated>2019-07-22T07:14:40.634Z</updated>
+    <updated>2019-07-23T07:35:42.669Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>胡思乱想</p></blockquote><a id="more"></a><h1 id="2019-07-22"><a href="#2019-07-22" class="headerlink" title="2019-07-22"></a>2019-07-22</h1><p>如何才能优雅的写样式。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>胡思乱想</p></blockquote><a id="more"></a><h1 id="2019-07-22"><a href="#2019-07-22" class="headerlink" title="2019-07-22"></a>2019-07-22</h1><p>如何才能优雅的写样式。</p><h1 id="2019-07-23"><a href="#2019-07-23" class="headerlink" title="2019-07-23"></a>2019-07-23</h1><p>不想浪费时间在做兼容性上，真的浪费时间。</p>]]></content>
     
     <summary type="html">
     

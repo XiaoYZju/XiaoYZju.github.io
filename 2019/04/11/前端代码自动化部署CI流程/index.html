@@ -10,19 +10,19 @@
 <title>前端代码自动化部署流程CICD - 大新的树洞</title>
 
 
-    <meta name="description" content="本人的开发环境代码托管采用SVN，在使用脚手架开发的过程中，若需要部署前端代码至测试服务器，需要在本地将代码打包成静态文件，提交至SVN，再有运维手动部署至测试服务器，这种提交代码的方式既原始又低效。本文旨在探索前端代码的进行自动化部署及发布。              环境的搭建由于本人没有公司web服务器的权限，本文的实践基于自己的阿里云服务器。 Gitlab的搭建可以选择自己搭建gitla">
+    <meta name="description" content="本人的开发环境代码托管采用SVN，在使用脚手架开发的过程中，若需要部署前端代码至测试服务器，需要在本地将代码打包成静态文件，提交至SVN，再有运维手动部署至测试服务器，这种提交代码的方式既原始又低效。本文旨在探索前端代码的进行自动化部署及发布。">
 <meta name="keywords" content="前端工程化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端代码自动化部署流程CICD">
 <meta property="og:url" content="http://yoursite.com/2019/04/11/前端代码自动化部署CI流程/index.html">
 <meta property="og:site_name" content="大新的树洞">
-<meta property="og:description" content="本人的开发环境代码托管采用SVN，在使用脚手架开发的过程中，若需要部署前端代码至测试服务器，需要在本地将代码打包成静态文件，提交至SVN，再有运维手动部署至测试服务器，这种提交代码的方式既原始又低效。本文旨在探索前端代码的进行自动化部署及发布。              环境的搭建由于本人没有公司web服务器的权限，本文的实践基于自己的阿里云服务器。 Gitlab的搭建可以选择自己搭建gitla">
+<meta property="og:description" content="本人的开发环境代码托管采用SVN，在使用脚手架开发的过程中，若需要部署前端代码至测试服务器，需要在本地将代码打包成静态文件，提交至SVN，再有运维手动部署至测试服务器，这种提交代码的方式既原始又低效。本文旨在探索前端代码的进行自动化部署及发布。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-02-08T13:05:41.922Z">
+<meta property="og:updated_time" content="2020-02-08T19:37:51.503Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端代码自动化部署流程CICD">
-<meta name="twitter:description" content="本人的开发环境代码托管采用SVN，在使用脚手架开发的过程中，若需要部署前端代码至测试服务器，需要在本地将代码打包成静态文件，提交至SVN，再有运维手动部署至测试服务器，这种提交代码的方式既原始又低效。本文旨在探索前端代码的进行自动化部署及发布。              环境的搭建由于本人没有公司web服务器的权限，本文的实践基于自己的阿里云服务器。 Gitlab的搭建可以选择自己搭建gitla">
+<meta name="twitter:description" content="本人的开发环境代码托管采用SVN，在使用脚手架开发的过程中，若需要部署前端代码至测试服务器，需要在本地将代码打包成静态文件，提交至SVN，再有运维手动部署至测试服务器，这种提交代码的方式既原始又低效。本文旨在探索前端代码的进行自动化部署及发布。">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -143,7 +143,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 714 个字)
+                    5 分钟 读完 (大约 715 个字)
                 </span>
                 
                 
@@ -159,6 +159,7 @@
             <blockquote>
 <p>本人的开发环境代码托管采用SVN，在使用脚手架开发的过程中，若需要部署前端代码至测试服务器，需要在本地将代码打包成静态文件，提交至SVN，再有运维手动部署至测试服务器，这种提交代码的方式既原始又低效。本文旨在探索前端代码的进行自动化部署及发布。            </p>
 </blockquote>
+<a id="more"></a>
 <h1 id="环境的搭建"><a href="#环境的搭建" class="headerlink" title="环境的搭建"></a>环境的搭建</h1><p>由于本人没有公司web服务器的权限，本文的实践基于自己的阿里云服务器。</p>
 <h2 id="Gitlab的搭建"><a href="#Gitlab的搭建" class="headerlink" title="Gitlab的搭建"></a>Gitlab的搭建</h2><p>可以选择自己搭建gitlab服务器，或者采用现有的gitlab仓库。</p>
 <blockquote>

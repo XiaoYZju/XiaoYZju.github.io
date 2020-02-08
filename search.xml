@@ -364,7 +364,8 @@
     <entry>
       <title><![CDATA[前端用户唯一标示 生成方案]]></title>
       <url>/2019/06/13/%E5%89%8D%E7%AB%AF%E7%94%A8%E6%88%B7%E5%94%AF%E4%B8%80%E6%A0%87%E7%A4%BA-%E7%94%9F%E6%88%90%E6%96%B9%E6%A1%88/</url>
-      <content type="html"><![CDATA[<h1 id="前端用户唯一标示-生成方案"><a href="#前端用户唯一标示-生成方案" class="headerlink" title="前端用户唯一标示 生成方案"></a>前端用户唯一标示 生成方案</h1><p>前端用户唯一标示由两部分组成：浏览器指纹、时间戳。</p>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h1 id="前端用户唯一标示-生成方案"><a href="#前端用户唯一标示-生成方案" class="headerlink" title="前端用户唯一标示 生成方案"></a>前端用户唯一标示 生成方案</h1><p>前端用户唯一标示由两部分组成：浏览器指纹、时间戳。</p>
 <h2 id="浏览器指纹"><a href="#浏览器指纹" class="headerlink" title="浏览器指纹"></a>浏览器指纹</h2><blockquote>
 <p>原理： 画布指纹追踪，音频采样，WebGL指纹识别，字体检查和浏览器插件探测。</p>
 <ol>
@@ -623,6 +624,7 @@
       <content type="html"><![CDATA[<blockquote>
 <p>本人的开发环境代码托管采用SVN，在使用脚手架开发的过程中，若需要部署前端代码至测试服务器，需要在本地将代码打包成静态文件，提交至SVN，再有运维手动部署至测试服务器，这种提交代码的方式既原始又低效。本文旨在探索前端代码的进行自动化部署及发布。            </p>
 </blockquote>
+<a id="more"></a>
 <h1 id="环境的搭建"><a href="#环境的搭建" class="headerlink" title="环境的搭建"></a>环境的搭建</h1><p>由于本人没有公司web服务器的权限，本文的实践基于自己的阿里云服务器。</p>
 <h2 id="Gitlab的搭建"><a href="#Gitlab的搭建" class="headerlink" title="Gitlab的搭建"></a>Gitlab的搭建</h2><p>可以选择自己搭建gitlab服务器，或者采用现有的gitlab仓库。</p>
 <blockquote>
@@ -770,7 +772,8 @@
     <entry>
       <title><![CDATA[生成项目树结构]]></title>
       <url>/2019/03/14/%E7%94%9F%E6%88%90%E9%A1%B9%E7%9B%AE%E6%A0%91%E7%BB%93%E6%9E%84/</url>
-      <content type="html"><![CDATA[<p> 在使用脚手架开发项目的过程中，生成项目结构树能够更好的理清组件之间的关系。</p>
+      <content type="html"><![CDATA[<a id="more"></a>
+<p> 在使用脚手架开发项目的过程中，生成项目结构树能够更好的理清组件之间的关系。</p>
 <ol>
 <li>安装<code>brew install tree</code></li>
 <li>常用命令<blockquote>
@@ -991,7 +994,8 @@
     <entry>
       <title><![CDATA[JavaScript高级程序设计读书笔记]]></title>
       <url>/2018/01/16/%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h1 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h1><h2 id="5-2-Array类型"><a href="#5-2-Array类型" class="headerlink" title="5.2 Array类型"></a>5.2 Array类型</h2><ol>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h1 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h1><h2 id="5-2-Array类型"><a href="#5-2-Array类型" class="headerlink" title="5.2 Array类型"></a>5.2 Array类型</h2><ol>
 <li><p>alert()要接受字符串参数，会在后台调用toString()方法</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>];    <span class="comment">//creates an array with three strings</span></div><div class="line">alert(colors.toString());    <span class="comment">//red,blue,green</span></div><div class="line">alert(colors.valueOf());     <span class="comment">//red,blue,green</span></div><div class="line">alert(colors);               <span class="comment">//red,blue,green</span></div></pre></td></tr></table></figure>
 </li>
@@ -1069,7 +1073,7 @@
 <blockquote>
 <p><a href="https://www.w3cplus.com/css3/understanding-flexbox-everything-you-need-to-know.html" target="_blank" rel="noopener">https://www.w3cplus.com/css3/understanding-flexbox-everything-you-need-to-know.html</a><br><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a><br><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool</a><br><a href="https://stackoverflow.com/questions/27539262/whats-the-difference-between-align-content-and-align-items" target="_blank" rel="noopener">https://stackoverflow.com/questions/27539262/whats-the-difference-between-align-content-and-align-items</a></p>
 </blockquote>
-<p>和龙哥去食堂三楼吃饭，我要吃酸辣土豆丝、糖醋里脊，好饿。<br>到了三楼发现没有我想吃的钱江肉丝，转而去桐庐土菜馆，吃得好撑，回来的时候，看到堕落街改名为龙宇路，这也太基了。</p>
+<p>和龙哥去食堂三楼吃饭，我要吃酸辣土豆丝、糖醋里脊，好饿。<br>到了三楼发现没有我想吃的钱江肉丝，转而去桐庐土菜馆，吃得好撑</p>
 <h4 id="2018-01-07"><a href="#2018-01-07" class="headerlink" title="2018-01-07"></a>2018-01-07</h4><p>玩了一天,喝了小时候经常喝的李子园，还是原来的滋味。不过，忘了李子园的瓶盖怎么玩了。</p>
 <h4 id="2018-01-08"><a href="#2018-01-08" class="headerlink" title="2018-01-08"></a>2018-01-08</h4><p>以后可以每天跑玉泉愉快的吃饭了。<br>flex-grow、flex-basis和flex-shrink之间的详细计算见楼下</p>
 <blockquote>
@@ -1100,8 +1104,8 @@
 <h4 id="2018-01-27"><a href="#2018-01-27" class="headerlink" title="2018-01-27"></a>2018-01-27</h4><p>看<a href="http://www.ruanyifeng.com/blog/2009/08/learning_javascript_closures.html" target="_blank" rel="noopener">闭包</a><br>去吃了春暖花开，好便宜。以后再也不去了。</p>
 <h4 id="2018-01-29"><a href="#2018-01-29" class="headerlink" title="2018-01-29"></a>2018-01-29</h4><p>正则正则 还有http 看完要起飞</p>
 <h4 id="2018-02-01"><a href="#2018-02-01" class="headerlink" title="2018-02-01"></a>2018-02-01</h4><p>入了input的大天坑，哎。</p>
-<h4 id="2018-04-11-2019-02-16"><a href="#2018-04-11-2019-02-16" class="headerlink" title="2018-04-11-2019-02-16"></a>2018-04-11-2019-02-16</h4><p><del>沉迷于美色，不能自拔。</del></p>
-]]></content>
+<!-- #### 2018-04-11-2019-02-16
+~~沉迷于美色，不能自拔。~~ -->]]></content>
       
         
     </entry>

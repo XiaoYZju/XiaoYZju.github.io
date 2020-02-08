@@ -149,7 +149,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 714 个字)
+                    5 分钟 读完 (大约 715 个字)
                 </span>
                 
                 
@@ -165,49 +165,16 @@
             <blockquote>
 <p>本人的开发环境代码托管采用SVN，在使用脚手架开发的过程中，若需要部署前端代码至测试服务器，需要在本地将代码打包成静态文件，提交至SVN，再有运维手动部署至测试服务器，这种提交代码的方式既原始又低效。本文旨在探索前端代码的进行自动化部署及发布。            </p>
 </blockquote>
-<h1 id="环境的搭建"><a href="#环境的搭建" class="headerlink" title="环境的搭建"></a>环境的搭建</h1><p>由于本人没有公司web服务器的权限，本文的实践基于自己的阿里云服务器。</p>
-<h2 id="Gitlab的搭建"><a href="#Gitlab的搭建" class="headerlink" title="Gitlab的搭建"></a>Gitlab的搭建</h2><p>可以选择自己搭建gitlab服务器，或者采用现有的gitlab仓库。</p>
-<blockquote>
-<p>目前搭建gitlab服务器非常方便，<a href="https://about.gitlab.com/install/" target="_blank" rel="noopener">https://about.gitlab.com/install/</a> 选择环境按步骤安装即可。</p>
-<p>安装完后，可能会报<strong>502错误</strong>。（本人也踩了这个坑，待解决）</p>
-</blockquote>
-<p>因此，本人直接选择了将代码存在<strong><a href="https://gitlab.com/" target="_blank" rel="noopener">https://gitlab.com/</a></strong> 进行实践。</p>
-<h2 id="GitLab-CI"><a href="#GitLab-CI" class="headerlink" title="GitLab-CI"></a>GitLab-CI</h2><p>GitLab-CI目前已经集成至高版本的gitlab上，无需安装。</p>
-<h2 id="GitLab-Runner"><a href="#GitLab-Runner" class="headerlink" title="GitLab-Runner"></a>GitLab-Runner</h2><p>GitLab-Runner 用于执行项目的yml脚本。安装流程如下：</p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo curl --output /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-darwin-amd64</div></pre></td></tr></table></figure>
-<h3 id="打开权限："><a href="#打开权限：" class="headerlink" title="打开权限："></a>打开权限：</h3> <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chmod +x /usr/local/bin/gitlab-runner</div></pre></td></tr></table></figure>
-<h3 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h3><p> <a href="https://docs.docker.com/install/linux/docker-ce/centos/" target="_blank" rel="noopener">https://docs.docker.com/install/linux/docker-ce/centos/</a> 按步骤安装即可</p>
-<h3 id="注册-gitlab-Runner"><a href="#注册-gitlab-Runner" class="headerlink" title="注册 gitlab-Runner"></a>注册 gitlab-Runner</h3><ol>
-<li><p>启动注册程序 <strong>sudo gitlab-runner register</strong></p>
-</li>
-<li><p>输入gitlab实例所在的URL，比如我部署在<a href="https://gitlab.com上，就输入https://gitlab.com" target="_blank" rel="noopener">https://gitlab.com上，就输入https://gitlab.com</a></p>
-<!-- ![image-20190411172026936](<http://39.106.189.201:8080/blog/CIimages/image-20190411171758535.png>) -->
-</li>
-<li><p>Please enter the gitlab-ci token for this runner:<br>这个token在项目内部，不是账户的token。<strong>settings =》 CI/CD =〉Runners =》 </strong></p>
-<!-- ![image-20190411172206478](http://39.106.189.201:8080/blog/CIimages/image-20190411172206478.png) -->
-</li>
-<li><p>接下来选择Runner executor<br>我们选择的是docker</p>
-</li>
-<li><p>选择这里我输入的是<strong>alpine:latest</strong></p>
-</li>
-</ol>
-<h2 id="gitlab-ci-yml配置"><a href="#gitlab-ci-yml配置" class="headerlink" title=".gitlab-ci.yml配置"></a>.gitlab-ci.yml配置</h2><p>详细的配置可以参考<a href="https://segmentfault.com/a/1190000010442764#articleHeader5" target="_blank" rel="noopener">https://segmentfault.com/a/1190000010442764#articleHeader5</a></p>
-<p>这里我的配置是</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="attr">image:</span> <span class="attr">node:11.12.0</span></div><div class="line"></div><div class="line"><span class="attr">stages:</span></div><div class="line"><span class="bullet">  -</span> <span class="string">build</span></div><div class="line"><span class="bullet">  -</span> <span class="string">deploy</span></div><div class="line"></div><div class="line"><span class="attr">build_test:</span></div><div class="line"><span class="attr">  stage:</span> <span class="string">build</span></div><div class="line"><span class="attr">  script:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">npm</span> <span class="string">set</span> <span class="string">registry</span> <span class="attr">https://registry.npm.taobao.org</span> <span class="comment"># 设置淘宝镜像地址</span></div><div class="line"><span class="bullet">    -</span> <span class="string">npm</span> <span class="string">install</span> <span class="bullet">--progress=false</span></div><div class="line"><span class="bullet">    -</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></div><div class="line"><span class="attr">  only:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">master</span></div><div class="line"><span class="attr">  artifacts:</span></div><div class="line"><span class="attr">    expire_in:</span> <span class="number">1</span> <span class="string">week</span></div><div class="line"><span class="attr">    paths:</span></div><div class="line"><span class="bullet">      -</span> <span class="string">dist</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="attr">deploy_master:</span></div><div class="line"><span class="attr">  image:</span> <span class="string">alpine</span></div><div class="line"><span class="attr">  stage:</span> <span class="string">deploy</span></div><div class="line"><span class="attr">  only:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">master</span></div><div class="line"><span class="attr">  script:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">apk</span> <span class="string">add</span> <span class="bullet">--no-cache</span> <span class="string">rsync</span> <span class="string">openssh</span></div><div class="line"><span class="bullet">    -</span> <span class="string">mkdir</span> <span class="bullet">-p</span> <span class="string">~/.ssh</span></div><div class="line"><span class="bullet">    -</span> <span class="string">echo</span> <span class="string">"$SSH_PRIVATE_KEY"</span> <span class="string">&gt;&gt;</span> <span class="string">~/.ssh/id_dsa</span></div><div class="line"><span class="bullet">    -</span> <span class="string">chmod</span> <span class="number">600</span> <span class="string">~/.ssh/id_dsa</span></div><div class="line"><span class="bullet">    -</span> <span class="string">echo</span> <span class="bullet">-e</span> <span class="string">"Host *\n\tStrictHostKeyChecking no\n\n"</span> <span class="string">&gt; ~/.ssh/config</span></div><div class="line">    - rsync -rav --delete dist/ "$SERVER_USER_HOST:$SERVER_DEV_PATH"    </div><div class="line"><span class="attr">  when:</span> <span class="string">manual</span></div></pre></td></tr></table></figure>
-<p>这里还需要配置一些环境变量，因为我们不能把如ssh私钥等暴露在yml文件下。</p>
-<!-- ![image-20190411173210185](<http://39.106.189.201:8080/blog/CIimages/image-20190411173210185.png>) -->
-<!-- ![image-20190411173354833](<http://39.106.189.201:8080/blog/CIimages/image-20190411173354833.png>) -->
-<blockquote>
-<p>此处的SSH私钥是开发者电脑的私钥。</p>
-</blockquote>
-<p>将配置好的yml文件放在项目的根目录下，推送至远程仓库。<strong>tata</strong></p>
-<!-- ![image-20190411173703975](<http://39.106.189.201:8080/blog/CIimages/image-20190411173703975.png>)  -->
-<p>开始自动编译了。可以选择是直接部署到web服务器或者是手动部署。在yml文件中配置即可。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">when:</span> <span class="string">manual</span></div></pre></td></tr></table></figure>
-<p>好了，最后就能在网站上看到自己部署的页面了。cheers！<br><a href="http://zxy1992.xyz:8080/forum/index.html#/" target="_blank" rel="noopener">http://zxy1992.xyz:8080/forum/index.html#/</a></p>
-
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/04/11/前端代码自动化部署CI流程/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>

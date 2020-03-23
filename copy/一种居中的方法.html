@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="绝对定位 上下左右都设置为0 margin为auto即可  12345678910111213141516171819202122232425262728293031323334353637&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;	&amp;lt;title&amp;gt;Documen">
+<meta name="keywords" content="css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="一种居中的方法">
+<meta property="og:url" content="http://yoursite.com/copy/一种居中的方法.html">
+<meta property="og:site_name" content="大新的树洞">
+<meta property="og:description" content="绝对定位 上下左右都设置为0 margin为auto即可  12345678910111213141516171819202122232425262728293031323334353637&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;	&amp;lt;title&amp;gt;Documen">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-09-14T01:43:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="一种居中的方法">
+<meta name="twitter:description" content="绝对定位 上下左右都设置为0 margin为auto即可  12345678910111213141516171819202122232425262728293031323334353637&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;	&amp;lt;title&amp;gt;Documen">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>一种居中的方法</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+    <div class="content index width mx-auto px2 my4">
+        
+          <header id="header">
+  <a href="/">
+  
+    
+      <div id="logo" style="background-image: url(/images/logo.png);"></div>
+    
+  
+    <div id="title">
+      <h1>大新的树洞</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fa fa-bars fa-2x"></i></a>
+      </li>
+       
+        <li><a href="/">Home</a></li>
+       
+        <li><a href="/about/">About</a></li>
+       
+        <li><a href="/posts/">Writing</a></li>
+       
+        <li><a href="http://github.com/sergodeeva">Projects</a></li>
+      
+    </ul>
+  </div>
+</header>
+
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><em>绝对定位 上下左右都设置为0 margin为auto即可</em></p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"../../css/base2016.css"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">		html,body &#123;</div><div class="line">			width: 100%;</div><div class="line">			height: 100%;</div><div class="line">		&#125;</div><div class="line">		.father &#123;</div><div class="line">			width: 100%;</div><div class="line">			height: 100%;</div><div class="line">			border: 1px red solid;</div><div class="line">			position: fixed;</div><div class="line">		&#125;</div><div class="line">		.father .son &#123;</div><div class="line">			width: 500px;</div><div class="line">			height: 500px;</div><div class="line">			border: 1px grey solid;</div><div class="line">			position: absolute;</div><div class="line">			top: 0;</div><div class="line">			bottom: 0;</div><div class="line">			left: 0;</div><div class="line">			right: 0;</div><div class="line">			margin: auto;</div><div class="line">			/*绝对定位 上下左右都设置为0 margin为auto即可*/</div><div class="line">		&#125;</div><div class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+  </div>
+</article>
+
+    </div>
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 峨嵋峰
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/posts/">Writing</a></li>
+         
+          <li><a href="http://github.com/sergodeeva">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-37473492-6', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+
